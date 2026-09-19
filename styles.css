@@ -1,0 +1,62 @@
+:root {
+  color-scheme: light dark;
+  --bg: #f6f1e8;
+  --ink: #1c1917;
+  --muted: #57534e;
+  --accent: #9f1239;
+  --rule: #d6d3d1;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1c1917;
+    --ink: #f5f5f4;
+    --muted: #a8a29e;
+    --accent: #fb7185;
+    --rule: #44403c;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  background: var(--bg);
+  color: var(--ink);
+  padding: 2rem;
+}
+main { max-width: 36rem; }
+.eyebrow {
+  margin: 0 0 0.75rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.1;
+  font-weight: 600;
+}
+.lede {
+  margin: 1.25rem 0 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+.meta {
+  margin: 2rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.9em;
+  color: var(--accent);
+}
